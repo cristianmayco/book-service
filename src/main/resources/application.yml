@@ -3,3 +3,28 @@ server:
 spring:
   application:
     name: book-service
+
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://172.20.0.2:5432/book_service
+    driver-class-name: org.postgresql.Driver
+  jackson:
+    default-property-inclusion: NON_NULL
+    serialization:
+      fail-on-empty-beans: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDIalect
+  flyway:
+    url: jdbc:postgresql://172.20.0.2:5432/
+    schemas: book_service
+    user: postgres
+    password: postgres
+    enabled: true
+    validate-on-migrate: false
+
