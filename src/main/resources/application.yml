@@ -45,4 +45,8 @@ spring:
     password: postgres
     enabled: true
     validate-on-migrate: false
+springdoc:
+  api-docs:
+    path: book-service/v3/api-docs
+
 
