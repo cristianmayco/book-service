@@ -25,7 +25,7 @@ spring:
   datasource:
     username: postgres
     password: postgres
-    url: jdbc:postgresql://172.20.0.2:5432/book_service
+    url: jdbc:postgresql://localhost:5433/book_service
     driver-class-name: org.postgresql.Driver
   jackson:
     default-property-inclusion: NON_NULL
@@ -39,11 +39,11 @@ spring:
     properties:
       dialect: org.hibernate.dialect.PostgreSQLDIalect
   flyway:
-    url: jdbc:postgresql://172.20.0.2:5432/
+    url: jdbc:postgresql://localhost:5433/
     schemas: book_service
     user: postgres
     password: postgres
-    enabled: true
+    enabled: false
     validate-on-migrate: false
   sleuth:
     sampler:
